@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+{% load inplace_edit %}
+
+<html>
+
+<head>
+
+    <title>{% block page-title %}Welcome{% endblock %} | Sample Template</title>
+
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <link type='text/css' rel='stylesheet' href='/static/css/base.css'>
+    <link type='text/css' rel='stylesheet' href='/static/css/nav.css'>
+
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Neuton:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="/static/js/menu.js"></script>
+    <script type='text/javascript' src="/static/js/user_actions.js"></script>
+
+    <script type='text/javascript'>
+
+
+    </script>
+
+    {% block extra-head %}
+
+    {% endblock %}
+
+</head>
+
+<body{% if active_user %} id='active-user'{% endif %}>
+
+<!-- HEADER -->
+<div id='header-wrapper' class='navbar wrapper' role='navigation'>
+
+    <div class='hamburger' onclick='toggleMobileMenu();'>
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <div id='header' class='container'>
+
+        {% include 'snippets/desktop_nav.html' %}
+        {% include 'snippets/mobile_nav.html' %}
+
+    </div>
+
+</div>
+<!-- END HEADER -->
+
+<!-- CONTENT -->
+<div id='content-wrapper' class='wrapper'>
+
+    {% block content %}
+
+
+    {% endblock %}
+
+</div>
+<!-- END CONTENT -->
+
+<!-- FOOTER -->
+<div id='footer-wrapper' class='wrapper'>
+
+    <div class='container' style='background-image: url("{{ logo.image_mobile }}")'>
+
+        <div class='left-col hidden-xs'>
+
+            <div class='left-col-copy'>
+
+
+            </div>
+
+            <div class='clear-both'></div>
+
+            <div class='copyright'>
+
+
+            </div>
+
+        </div>
+
+        <div class='right-col'>
+
+            <div class='right-col-copy'>
+
+
+            </div>
+
+            <div class='social-icons'>
+
+                {% for item in social_links %}
+                    <a href='{{ item.link }}' target='_blank'>
+                        <img src='{{ item.image }}'>
+                    </a>
+                {% endfor %}
+
+            </div>
+
+            <div class='clear-both'></div>
+
+            <div class='copyright visible-xs' style='margin-top: 40px;'>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- END FOOTER -->
+
+<!-- USER ACTIONS -->
+{% if active_user %}
+    <div id='user-actions-menu' class='wrapper hidden-xs hidden-sm'>
+
+        <div id='user-actions-wrapper'>
+
+            <div id='user-hamburger' onclick='toggleUserActions()'>
+                <span></span>
+                <span></span>
+                <span class='last'></span>
+            </div>
+
+            <div class='user-actions'>
+
+                <span class='left'>
+                    Welcome back, <a href='/admin/'>{{ active_user.username }}</a>
+                </span>
+
+                <span class='left break'></span>
+
+                <span class='left logout'>
+                    <a href='/admin/logout/'>logout</a>
+                </span>
+
+            </div>
+
+            <div class='more-actions'>
+
+                <span class='left'>
+                    <a onclick='displayManageWindow("/admin/navigation/")'>navigation</a>
+                </span>
+
+                <span class='left'>
+                    <a onclick='displayManageWindow("/admin/page_content/webpage/")'>pages</a>
+                </span>
+
+                <span class='left break'></span>
+
+                {% block user-actions %}{% endblock %}
+
+            </div>
+
+        </div>
+
+        <div id='all-apps'>
+
+            <ul class='no-list'>
+
+                <li><a onclick='displayManageWindow("/admin/auth/")'>users</a></li>
+                <li><a onclick='displayManageWindow("/admin/site_content/")'>site content</a></li>
+                <li><a onclick='displayManageWindow("/admin/navigation/")'>navigation</a></li>
+                <li><a onclick='displayManageWindow("/admin/page_content/")'>pages</a></li>
+                <li><a onclick='displayManageWindow("/admin/home_content/")'>home content</a></li>
+                <li><a onclick='displayManageWindow("/admin/categories/")'>categories</a></li>
+                <li><a onclick='displayManageWindow("/admin/contact/")'>contact</a></li>
+                <li class='last'><a onclick='displayManageWindow("/admin/filebrowser/browse/")'>your media</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div id='user-manage-wrapper'>
+
+        <div id='mask' onclick='hideManageWindow()'></div>
+
+        <div id='user-manage-dialog'>
+
+            <div id='user-manage-content'></div>
+
+            <div class='clear-both'></div>
+
+            <div id='user-manage-buttons'>
+
+                <span class='btn action left' onclick='hideManageWindow()'>Close</span>
+                <span class='btn info left' onclick='saveManageWindow()'>Refresh Page</span>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endif %}
+<!-- END USER ACTIONS -->
+
+</body>
+
+</html>
