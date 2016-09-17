@@ -1,31 +1,29 @@
-html
-
-<input type="text" name="First">First
+<html>
+	<form>
+		<input type="text" name="First">First
 		<input type="text" name="Last">Last
 		<input type="text" name="City" value="New York" selected>City
-
-
+	
 		<label>
 			<input type="radio" name="gender" value="male">male
 		</label>
-
+	
 		<label>
 			<input type="radio" name="gender" value="female">female
 		</label>
-
-
+	
 		<input type="checkbox" name="color" value="green">green
 		<input type="checkbox" name="color" value="blue">blue
 		<input type="checkbox" name="color" value="red">red
-
-
+	
 		<button type="submit">submit</button>
-
+	
 		<input type="button" value="submit">
-
-
+	
 		<select name="State">
 			<option value="Texas">Texas</option>
 			<option value="Florida">Florida</option>
 			<option value="Tennesse">Tennesse</option>
 		</select>
+	</form>
+</html>
