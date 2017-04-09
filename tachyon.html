@@ -9,22 +9,21 @@ css in my html file. One class per attribute. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.6.2/tachyons.css">
+  <link rel="stylesheet" href="http://unpkg.com/tachyons-flexbox@2.0.5/css/tachyons-flexbox.min.css" />
   <title>Document</title>
 </head>
 
 <style>
 .bg-peach { background-color: #ffdab9; }
-.flex { display: flex; }
-.flex1 { flex: 1; }
 </style>
 
 <body>
   <header class="f1 tc">This is an example of functional css</header>
   <div class="container mt6 ph4 flex">
-    <p class="bg-peach pa3 tc flex1"><a class="bg-yellow">0</a>Hey there</p>
-    <p class="bg-green pa3 tc flex1"><a class="bg-yellow">1</a>one</p>
-    <p class="bg-blue pa3 tc flex1"><a class="bg-yellow">2</a>two</p>
-    <p class="bg-orange pa3 tc flex1"><a class="bg-yellow">3</a>three</p>
+    <p class="bg-peach pa3 tc flex-auto"><a class="bg-yellow">0</a>Hey there</p>
+    <p class="bg-green pa3 tc flex-auto"><a class="bg-yellow">1</a>one</p>
+    <p class="bg-blue pa3 tc flex-auto"><a class="bg-yellow">2</a>two</p>
+    <p class="bg-orange pa3 tc flex-auto"><a class="bg-yellow">3</a>three</p>
   </div>
   <div class="w-third">
     <p class="tc ml2">lorem ipsum dolor ed simun</p>
@@ -37,9 +36,9 @@ css in my html file. One class per attribute. -->
   </div>
   <footer class="m7 bg-peach">
     <p class="bg-light-green flex">
-      <li class="flex1">Software Solutions LLC</li>
-      <li class="flex1">Copyright 2017</li>
-      <li class="flex1">Pea Ridge Arkansas</li>
+      <li class="flex-auto">Software Solutions LLC</li>
+      <li class="flex-auto">Copyright 2017</li>
+      <li class="flex-auto">Pea Ridge Arkansas</li>
     </p>
   </footer>
 </body>
