@@ -1,7 +1,7 @@
 <html>
 	<form>
-		<input type="text" name="First">First
-		<input type="text" name="Last">Last
+		<input type="text" name="First" required="true">First
+		<input type="text" name="Last" required="true">Last
 		<input type="text" name="City" value="New York" selected>City
 	
 		<label>
