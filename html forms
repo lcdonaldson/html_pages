@@ -1,5 +1,5 @@
 <html>
-	<form>
+	<form id="contact">
 		<input type="text" name="First" required="true">First
 		<input type="text" name="Last" required="true">Last
 		<input type="text" name="City" value="New York" selected>City
@@ -16,15 +16,13 @@
 		<input type="checkbox" name="color" value="blue">blue
 		<input type="checkbox" name="color" value="red">red
 	
-		<button type="submit">submit</button>
-	
-		<input type="button" value="submit">
-	
 		<select name="State">
 			<option value="Texas">Texas</option>
 			<option value="Florida">Florida</option>
 			<option value="Tennesse">Tennesse</option>
 		</select>
+		
+		<button id="submit" type="submit">submit</button>
 	</form>
 	<!-- Comments go here -->
 </html>
