@@ -7,7 +7,13 @@ import Html.Attributes exposing (..)
 
 main =
 
-  div [ ]
+  div [
+      style
+      [
+        ("text-align","center")
+      ]
+    ]
+    
     [
       img [src "https://s-media-cache-ak0.pinimg.com/236x/a3/da/3f/a3da3f6884ed150b719c95669d21976e.jpg"][]
       ,p []
