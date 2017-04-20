@@ -11,6 +11,9 @@ main =
       style
       [
         ("text-align","center")
+        ,("padding","5px")
+        ,("background-color", "green")
+        ,("color", "white")
       ]
     ]
     
