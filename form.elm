@@ -1,6 +1,3 @@
--- Read all about this program in the official Elm guide:
--- https://guide.elm-lang.org/architecture/user_input/forms.html
-
 import Html exposing (..)
 import Html.Attributes exposing (..)
 
@@ -20,9 +17,9 @@ main =
     
     [
       img [ src "https://s-media-cache-ak0.pinimg.com/236x/a3/da/3f/a3da3f6884ed150b719c95669d21976e.jpg"][]
-      ,p []
+      ,h2 []
         [
-          text "stuff here"
+          text "Login Here"
         ]
 
       ,div []
@@ -36,7 +33,7 @@ main =
                 ("min-height","20px") 
                 ,("min-width","200px")
                 ,("margin-bottom","20px")
-              ], type_ "text", placeholder "Name" 
+              ], type_ "text", placeholder "Name"
             ] []
           ]
 
@@ -62,6 +59,19 @@ main =
                 ,("margin-bottom","20px")
               ], type_ "password", placeholder "Re-enter Password" 
             ] []
+          ]
+          
+          ,div []
+          [
+            input [
+              style
+                [
+                  ("background-color","white")
+                  ,("border","none")
+                  ,("min-width","200px")
+         
+                ], type_ "submit"
+            ][]
           ]
 
         ]
