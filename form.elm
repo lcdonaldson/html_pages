@@ -33,6 +33,8 @@ main =
                 ("min-height","20px") 
                 ,("min-width","200px")
                 ,("margin-bottom","20px")
+                ,("border","none")
+                ,("padding-left", "5px")
               ], type_ "text", placeholder "Name"
             ] []
           ]
@@ -45,6 +47,8 @@ main =
                 ("min-height","20px") 
                 ,("min-width","200px")
                 ,("margin-bottom","20px")
+                ,("border","none")
+                ,("padding-left", "5px")
               ], type_ "password", placeholder "Password" 
             ] []
           ]
@@ -57,6 +61,8 @@ main =
                 ("min-height","20px") 
                 ,("min-width","200px")
                 ,("margin-bottom","20px")
+                ,("border","none")
+                ,("padding-left", "5px")
               ], type_ "password", placeholder "Re-enter Password" 
             ] []
           ]
@@ -68,7 +74,8 @@ main =
                 [
                   ("background-color","white")
                   ,("border","none")
-                  ,("min-width","200px")
+                  ,("min-width","205px")
+                  ,("height", "30px")
          
                 ], type_ "submit"
             ][]
@@ -76,3 +83,4 @@ main =
 
         ]
     ]
+  
