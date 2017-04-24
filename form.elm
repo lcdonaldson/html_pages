@@ -9,9 +9,10 @@ main =
     style
       [
         ("text-align","center")
-        ,("padding","10px")
+        ,("padding","40px")
         ,("background-color", "green")
         ,("color", "white")
+        ,("min-height", "100%")
       ]
     ]
     
@@ -72,10 +73,13 @@ main =
             input [
               style
                 [
-                  ("background-color","white")
+                  ("background-color","blue")
                   ,("border","none")
-                  ,("min-width","205px")
+                  ,("min-width","207px")
                   ,("height", "30px")
+                  ,("font-family", "Open Sans")
+                  ,("font-size","13pt")
+                  ,("color","white")
          
                 ], type_ "submit"
             ][]
