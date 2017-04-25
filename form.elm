@@ -8,7 +8,7 @@ main =
   div [ 
     style
       [
-        ("text-align","center")
+         ("text-align","center")
         ,("padding","40px")
         ,("background-color", "green")
         ,("color", "white")
@@ -17,7 +17,20 @@ main =
     ]
     
     [
-      img [ src "https://s-media-cache-ak0.pinimg.com/236x/a3/da/3f/a3da3f6884ed150b719c95669d21976e.jpg"][]
+      div [
+        style 
+          [
+            ("border","1px solid white")
+            ,("border-radius","50%")
+            ,("width","30px")
+            ,("height","30px")
+            ,("padding", "8px 2px 2px 2px")
+            ,("position","absolute")
+            ,("top","10px")
+            ,("left","80px")
+          ]
+      ][ text "•••" ]
+      ,img [ src "https://s-media-cache-ak0.pinimg.com/236x/a3/da/3f/a3da3f6884ed150b719c95669d21976e.jpg"][]
       ,h2 []
         [
           text "Login Here"
@@ -87,4 +100,3 @@ main =
 
         ]
     ]
-  
