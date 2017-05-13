@@ -13,6 +13,13 @@
     <p>{{product.description}}</p>
   {% end content %}
   
+  {% if blog %}
+    <div>
+      <h2>{{blog.title}}</h2>
+      <div>{{blog.content}}</div>
+    </div>
+  {% endif %}
+  
   {% include 'cart.js' %}
   
   {% footer %}
