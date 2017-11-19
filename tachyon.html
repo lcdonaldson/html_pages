@@ -14,12 +14,18 @@ css in my html file. One class per attribute. -->
 </head>
 
 <style>
+background: var(--mainColor);
 .bg-peach { background-color: #ffdab9; }
+  
+.doc {
+  background: var(--mainColor);
+}
+  
 </style>
 
 <body>
   <header class="f1 tc">This is an example of functional css</header>
-  <div class="container mt6 ph4 flex">
+  <div class="container mt6 ph4 flex doc">
     <p class="bg-peach pa3 tc flex-auto">
       <a class="bg-yellow">0</a>
       Hey there
