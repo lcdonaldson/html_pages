@@ -3,12 +3,12 @@ window.onload = function () {
     let list = [];
 
     function addPassenger(name, list = []) {
-        if (list.length == 0){
+        if (list.length === 0){
             list.push(name);
             return list;
         } else {
             for(var i = 0; i < list.length; i++){
-                if (list[i] == undefined){
+                if (list[i] === undefined){
                     list[i] = name;
                     return list;
                 } else if (i == list.length - 1) {
