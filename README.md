@@ -9,4 +9,5 @@ elm
 amp
 jsx
 php
+vue
 ```
