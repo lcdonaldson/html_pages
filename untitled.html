@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
+  {% extends "base.html" %}
+
   {% comment %}
     This is the start of a liquid page. Not my favorite templating language.
     But still a great example of what's out there.
@@ -13,13 +10,13 @@
     <p>{{product.description}}</p>
   {% end content %}
   
-  {% if blog %}
-    <div>
-      <h2>{{blog.title}}</h2>
-      <div>{{blog.content}}</div>
-      <div>{{blog.ads}}</div>
-    </div>
-  {% endif %}
+ 
+  {% block content %}
+      <h1>Hi, {{ user.username }}!</h1>
+      {% for post in posts %}
+      <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+      {% endfor %}
+  {% endblock %}
   
   {% include 'cart.js' %}
   
@@ -30,5 +27,3 @@
     <p>{{info.address}}</p>
   {% end footer %}
   
-</body>  
-</html>  
