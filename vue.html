@@ -15,8 +15,8 @@
         </div>
 
         <div id="app-2">
-            <input style="margin-top: 30px;" v-model="message">
-            <p style="position: absolute; right: 10px;">{{ message }}</p>
+            <input v-model="message">
+            <p>{{ message }}</p>
         </div>
         <!-- JS -->
         <script>
@@ -47,6 +47,15 @@
               text-align: center;
               color: #2c3e50;
               margin-top: 5rem;
+            }
+
+            #app-2 input {
+                margin: 30px
+            }
+            
+            #app-2 p {
+                position: absolute;
+                right: 10px;
             }
         </style>
     </body>
