@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * from '../style/main.less';
+import "../style/main.less";
 
-export default class Counter extends React.Component {
+export class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,13 +25,13 @@ export default class Counter extends React.Component {
 
   render() {
     return (
-        <div className="divStyle">
-          <button className="btnLayout btnSkin dec" onClick={this.dec}> - </button>
-          <div className="counterWrapper">
-            <p className="counterTextLayout">{this.state.value}</p>
-          </div>
-          <button className="btnLayout btnSkin inc" onClick={this.inc}> + </button>
+      <div className="container containerSkin">
+        <button className="btnLayout btnSkin dec" onClick={this.dec}> - </button>
+        <div className="counterWrapper">
+        <p className="counterTextLayout">{this.state.value}</p>
         </div>
+        <button className="btnLayout btnSkin inc" onClick={this.inc}> + </button>
+      </div>
     );
   }
 }
