@@ -23,15 +23,22 @@ export class Counter extends React.Component {
     });
   };
 
+  reset = () => {
+    this.setState({
+      value: 0
+    })
+  }
+
   render() {
     return (
-      <div className="container containerSkin">
-        <button className="btnLayout btnSkin dec" onClick={this.dec}> - </button>
-        <div className="counterWrapper">
-        <p className="counterTextLayout">{this.state.value}</p>
+        <div className="container containerSkin">
+          <button className="btnLayout btnSkin dec" onClick={this.dec}> - </button>
+          <div className="counterWrapper">
+            <p className="counterTextLayout">{this.state.value}</p>
+          </div>
+          <button className="btnLayout btnSkin inc" onClick={this.inc}> + </button>
+          <button className="btnLayout btnSkin reset" onClick={this.reset}> Reset </button>
         </div>
-        <button className="btnLayout btnSkin inc" onClick={this.inc}> + </button>
-      </div>
     );
   }
 }
