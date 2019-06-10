@@ -3,11 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<title>James Lessons</title>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
-	<script src="index.js"></script>
+<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+	<script src="index.js"></script> -->
+	<script type = "text/javascript">
+         <!-- // Normally I would externalize this code into a index.js file but I am purposely leaving it here as a begining
+              // lesson for a buddy to work on. We will cover externalized JS at a later point.
+            function whatsToday() {
+				let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+				let day;
+				day = new Date();
+
+				let date = document.getElementById("day")
+					.innerHTML = `Today is ${(day.toLocaleDateString("en-US", options))}`;
+
+				return date;
+			}
+         //-->
+      </script> 
 </head>
 
-<body>
+
+
+<body onload="whatsToday()">
 	<!-- THIS IS HOW YOU ADD COMMENTS -->
 	<div class="container">
 		<title>Pretty self explanitory but not often used anymore</title>
@@ -88,12 +105,8 @@
 	  </tr>			
 	 
 	</table>
-
-
 	
-	<footer> 
-		<h3>This is the footer of the page. Much of the contact info and copyright information along with social media icons can go here.</h3>
-	</footer>
+	<footer id="day"></footer>
 
 </body>
 </html>
