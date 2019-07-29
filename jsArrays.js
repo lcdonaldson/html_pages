@@ -25,6 +25,7 @@ window.onload = function () {
     list = addPassenger(" mackenzie", list);
     list = addPassenger(" ashlyn", list);
     list = addPassenger(" mailey", list);
+    list = addPassenger(" ava", list);
 
     document.getElementById("listHere").innerHTML = list;
 }
