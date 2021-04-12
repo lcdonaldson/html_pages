@@ -15,11 +15,6 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
-q:before, 
-q:after {
-	content: '';
-	content: none;
-}
 
 li {
 	list-style-type: none;
